@@ -25,7 +25,11 @@ function changeTaskBackgroundColor() {
 };
 function bubblesort() {
     var sortedTask = getTasksAsArray().sort();
+<<<<<<< HEAD
     while (myTaskList.childElementCount > 0) {
+=======
+    while (myTaskList.childElementCount>0) {
+>>>>>>> 08b26bd696784fddc0d943e2b1e9fb85cb6541f5
         myTaskList.removeChild(myTaskList.lastChild);
     };
     sortedTask.forEach((e) => addNewTask(e));
