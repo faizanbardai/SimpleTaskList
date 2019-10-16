@@ -1,12 +1,19 @@
 function addNewTask() {
-    var newTaskText = document.querySelector("#newTask").value;
     var newTask = document.createElement("li");
-    newTask.innerText = newTaskText;
+    newTask.innerText = document.querySelector("#newTask").value;
     document.querySelector("#myTaskList").appendChild(newTask);
+    document.querySelector("#newTask").value = "";
 };
 function removeLast() {
-    myTaskList.removeChild(myTaskList.lastChild);
+    myTaskList.childElementCount > 0 ? myTaskList.removeChild(myTaskList.lastChild) : null;
+
 };
 function removeFirst() {
-    myTaskList.removeChild(myTaskList.firstChild);
-}
+    myTaskList.childElementCount > 0 ? myTaskList.removeChild(myTaskList.firstChild) : null;
+};
+function getTasksAsArray() {
+    var allTasks = document.querySelectorAll("#myTaskList li");
+    var allTasksAsString = [];
+    allTasks.forEach((e) => allTasksAsString.push(e.innerText));
+    return allTasksAsString;
+};
