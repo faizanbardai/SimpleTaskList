@@ -1,6 +1,6 @@
 /* color palette used: https://colorhunt.co/palette/162500 */
 
-.taskList {
+#myTaskList {
     background-color: #ffd739;
 }
 .taskListItem {
