@@ -10,7 +10,15 @@ function addNewTask(e) {
     document.querySelector("#myTaskList").appendChild(newLi);
 
     //clear the input text field
-    document.querySelector("#newTask").value = "";
+    newTask.value = "";
+    newTask.focus();
+    
+};
+function enterToAdd(event) {
+    
+    if (event.keyCode === 13) {
+        addNewTask(newTask.value);
+    };
 };
 function removeLast() {
     //check if there any list item present; if so, then delete the last element
