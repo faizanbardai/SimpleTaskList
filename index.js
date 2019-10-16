@@ -46,9 +46,7 @@ function bubblesort() {
     var sortedTask = getTasksAsArray().sort();
 
     //delete all list items
-    while (myTaskList.childElementCount > 0) {
-        removeFirst();
-    };
+    myTaskList.innerHTML = "";
 
     //repopulate the list items after sorting 
     //by calling addNewTask function and passing each list item as parameter
