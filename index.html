@@ -12,15 +12,27 @@
 
 <body>
     <h1>Welcome to your personal Task List!</h1>
-    <br />
+    <br>
 
-    <span>You can add any task you like by writing it in the specified field and then press "Add new
-        task"</span><br /><br />
-
+    <span>You can add any task you like by writing it in the specified field
+        and then press "Add new task"</span>
+    <br>
     <input type="text" id="newTask">
     <input type="button" value="Add new Task" onclick="addNewTask()">
-    <input type="button" value="Remove last item" onclick="removeLastItem()">
-    
+    <input type="button" value="Remove first item" onclick="removeFirst()">
+    <input type="button" value="Remove last item" onclick="removeLast()">
+
+    <ul id="myTaskList"></ul>
+
+    <hr>
+
+    <input type="color" placeholder="Color" id="colorPicker">
+    <input type="button" value="Change task background" onclick="changeTaskBackgroundColor()">
+
+    <hr>
+
+    <input type="button" value="Sort" onclick="bubblesort()" />
+
 </body>
 
 </html>
