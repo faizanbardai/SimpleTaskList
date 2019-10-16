@@ -12,10 +12,10 @@ function addNewTask(e) {
     //clear the input text field
     newTask.value = "";
     newTask.focus();
-    
+
 };
 function enterToAdd(event) {
-    
+
     if (event.keyCode === 13) {
         addNewTask(newTask.value);
     };
